@@ -11,17 +11,17 @@ ostream &operator<<(ostream &out, const Expresion &exp)
 
 ExpresionImp::ExpresionImp()
 {
-	this->e = new ExpresionImp(0);
+	e = new ExpresionImp(0);
 }
 
 ExpresionImp::ExpresionImp(int valor)
 {
-	this->e = ExpresionCte(valor);
+	e = new ExpresionCte(valor);
 }
 
 ExpresionImp::ExpresionImp(char *referencia)
 {
-	this->e = ExpresionRef (referencia);
+	e = new ExpresionVar (referencia);
 }
 
 ExpresionImp::ExpresionImp(const Expresion &exp)
@@ -114,22 +114,22 @@ bool ExpresionImp::operator>=(const Expresion &exp) const {
 
 Expresion &ExpresionImp::operator+(const Expresion &exp) const
 {
-	return *new ExpresionImp(ExpresionBin(this->e,'+',exp));
+	return *new ExpresionImp(ExpresionBin(*this->e,'+',exp));
 }
 
 Expresion &ExpresionImp::operator-(const Expresion &exp) const
 {
-	return *new ExpresionImp(ExpresionBin(this->e,'-',exp));
+	return *new ExpresionImp(ExpresionBin(*this->e,'-',exp));
 }
 
 Expresion &ExpresionImp::operator*(const Expresion &exp) const
 {
-	return *new ExpresionImp(ExpresionBin(this->e,'*',exp));
+	return *new ExpresionImp(ExpresionBin(*this->e,'*',exp));
 }
 
 Expresion &ExpresionImp::operator/(const Expresion &exp) const
 {
-	return *new ExpresionImp(ExpresionBin(this->e,'/',exp));
+	return *new ExpresionImp(ExpresionBin(*this->e,'/',exp));
 }
 
 int ExpresionImp::Evaluar(bool &error) const

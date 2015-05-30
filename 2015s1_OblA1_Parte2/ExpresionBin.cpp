@@ -19,24 +19,30 @@ ExpresionBin::ExpresionBin(const Expresion &expIzq, char op, const Expresion &ex
 	this->op = op;
 }
 
-ExpresionBin::ExpresionBin(const ExpresionBin &exp)
-{
-	//NO IMPLEMENTADO
-}
-Expresion &ExpresionBin::operator=(const Expresion &exp)
-{
-
-}
-
-Expresion &ExpresionBin::operator=(const ExpresionBin &exp)
-{
-	
-}
 
 ExpresionBin::~ExpresionBin()
 {
 	delete this->der;
 	delete this->izq;
+}
+Expresion &ExpresionBin::operator=(const Expresion &exp)
+{
+	if(this != &exp) {
+		
+		//NO IMPLEMENTADO
+	
+	}
+	return *this;
+}
+
+Expresion &ExpresionBin::operator=(const ExpresionBin &exp)
+{
+	if(this != &exp) {
+
+		//NO IMPLEMENTADO
+
+	}
+	return *this;
 }
 
 bool ExpresionBin::operator==(const Expresion &exp) const {
@@ -55,7 +61,8 @@ bool ExpresionBin::operator<(const Expresion &exp) const {
 }
 
 bool ExpresionBin::operator<=(const Expresion &exp) const {
-	
+	assert (false);
+	return false;
 }
 
 bool ExpresionBin::operator>(const Expresion &exp) const {
@@ -86,7 +93,7 @@ Expresion &ExpresionBin::operator*(const Expresion &exp) const
 	return *new ExpresionBin();
 }
 
-Expresion &ExpresionImp::operator/(const Expresion &exp) const
+Expresion &ExpresionBin::operator/(const Expresion &exp) const
 {
 	assert (false);
 	return *new ExpresionBin();

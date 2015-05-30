@@ -1,27 +1,21 @@
-#ifndef EXPRESIONIMP_H
-#define EXPRESIONIMP_H
+#ifndef EXPRESIONCTE_H
+#define EXPRESIONCTE_H
 
 #include "Expresion.h"
 #include "Cadena.h"
-#include "ExpresionImp.h"
-#include "ExpresionCte.h"
-#include "ExpresionVar.h"
-#include "ExpresionBin.h"
 
-
-class ExpresionImp : public Expresion
+class ExpresionCte : public Expresion
 {
 public:
-	ExpresionImp();
-	ExpresionImp(int valor);
-	ExpresionImp(char *referencia);
-	ExpresionImp(const Expresion &exp);
-	ExpresionImp(const ExpresionImp &exp);
+	ExpresionCte();
+	ExpresionCte(int valor);	
+	ExpresionCte(char *referencia);
+	ExpresionCte(const ExpresionCte &exp);
 
 	Expresion &operator=(const Expresion &exp);
-	Expresion &operator=(const ExpresionImp &exp);
+	Expresion &operator=(const ExpresionCte &exp);
 
-	~ExpresionImp();
+	~ExpresionCte();
 
 	bool operator==(const Expresion &exp) const;
 	bool operator!=(const Expresion &exp) const;
@@ -42,8 +36,7 @@ public:
 	Expresion *Clon() const;
 
 private:
-
-	Expresion *e;
+	int valor;
 
 };
 
