@@ -110,6 +110,15 @@
     <ClCompile Include="ConductorPruebaObl2.cpp">
       <Filter>Pruebas Unitarias</Filter>
     </ClCompile>
+    <ClCompile Include="ExpresionBin.cpp">
+      <Filter>Expresion</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpresionCte.cpp">
+      <Filter>Expresion</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpresionVar.cpp">
+      <Filter>Expresion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constantes.h">
@@ -195,6 +204,15 @@
     </ClInclude>
     <ClInclude Include="ConductorPruebaObl2.h">
       <Filter>Pruebas Unitarias</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpresionBin.h">
+      <Filter>Expresion</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpresionCte.h">
+      <Filter>Expresion</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpresionVar.h">
+      <Filter>Expresion</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -11,17 +11,17 @@
 ----------------------------------------------------------------------
 PRUEBA EXPRESIONES SIMPLES.
 ----------------------------------------------------------------------
-
+10
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion a = 10
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-
+0
 
 ----------------------------- Testeo --------------------------------
 
@@ -31,17 +31,17 @@ PRUEBA EXPRESIONES SIMPLES.
 		.........OK.........
 ---------------------------------------------------------------------
 
-
+-8
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = -8
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-
+0
 
 ----------------------------- Testeo --------------------------------
 
@@ -51,14 +51,14 @@ PRUEBA EXPRESIONES SIMPLES.
 		.........OK.........
 ---------------------------------------------------------------------
 
-
+10
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion e = 10 (copia de a)
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
 ----------------------------------------------------------------------
@@ -69,7 +69,7 @@ Expresion b = 2
 Expresion d =-3
 Expresion e = 6
 
-Expresion c = a-a : 
+Expresion c = a-a : (5)-(5)
 
 ----------------------------- Testeo --------------------------------
 
@@ -79,54 +79,54 @@ Expresion c = a-a :
 		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = a+b : 
+Expresion c = a+b : (5)+(2)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 7
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = a-b : 
+Expresion c = a-b : (5)-(2)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 3
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = a+d : 
+Expresion c = a+d : (5)+(-3)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 2
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = a-d : 
+Expresion c = a-d : (5)-(-3)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 8
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = a * b : 
+Expresion c = a * b : (5)*(2)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 10
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
 Expresion a = 5
@@ -135,91 +135,91 @@ Expresion c = 0
 Expresion d =-3
 Expresion e = 6
 
-Expresion c = a+a+a : 
+Expresion c = a+a+a : ((5)+(5))+(5)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 15
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = e*e*a : 
+Expresion c = e*e*a : ((6)*(6))*(5)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 180
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = (e + b) * b : 
+Expresion c = (e + b) * b : ((6)+(2))*(2)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 16
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = (a - b) * e: 
+Expresion c = (a - b) * e: ((5)-(2))*(6)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 18
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = ((a - b) * e)*( (e+b)- a ): 
+Expresion c = ((a - b) * e)*( (e+b)- a ): (((5)-(2))*(6))*(((6)+(2))-(5))
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 54
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = ((a + a + a) / a ): 
+Expresion c = ((a + a + a) / a ): (((5)+(5))+(5))/(5)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 3
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = ((b + b + b) / e ): 
+Expresion c = ((b + b + b) / e ): (((2)+(2))+(2))/(6)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 1
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = ((b + b + b) / e ): 
+Expresion c = ((b + b + b) / e ): (((2)+(2))+(2))/(6)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 1
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
 Expresion a = 11
 Expresion b = 2
 Expresion d = 4
 
-Expresion c = c * (a + b): 
+Expresion c = c * (a + b): (0)*((11)+(2))
 
 ----------------------------- Testeo --------------------------------
 
@@ -229,55 +229,55 @@ Expresion c = c * (a + b):
 		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = a * (a + b): 
+Expresion c = a * (a + b): (11)*((11)+(2))
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 143
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = c * a [(a * (a + b) ) * a]: 
+Expresion c = c * a [(a * (a + b) ) * a]: ((11)*((11)+(2)))*(11)
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 1573
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion c = (a - b) * (a + b): 
+Expresion c = (a - b) * (a + b): ((11)-(2))*((11)+(2))
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 117
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion b = d: 
-Expresion c = (a - b) * (a + b): 
+Expresion b = d: 4
+Expresion c = (a - b) * (a + b): ((11)-(4))*((11)+(4))
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion c = 105
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
-Expresion d = c.clon: 
+Expresion d = c.clon: ((11)-(4))*((11)+(4))
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: Expresion d = 105
 
-  Retorno de la app.: 1 ->	ERROR
-  Se esperaba.......: 0 ->	OK
+  Retorno de la app.: 0 ->	OK
+		.........OK.........
 ---------------------------------------------------------------------
 
 ----------------------------------------------------------------------
@@ -291,14 +291,14 @@ Fin Pruebas OK.
 Expresion a = 10
 Expresion b = 20
 
-Expresion c = (a+b) / (a-a): 
+Expresion c = (a+b) / (a-a): ((10)+(20))/((10)-(10))
 
 ----------------------------- Testeo --------------------------------
 
   Comentario: No se puede dividir entre CERO
 
-  Retorno de la app.: 0 ->	OK
-  Se esperaba.......: 1 ->	ERROR
+  Retorno de la app.: 1 ->	ERROR
+		.........OK.........
 ---------------------------------------------------------------------
 
 ----------------------------------------------------------------------
@@ -309,8 +309,8 @@ Fin PRUEBAS DE EJEMPLO DE USO EXPRESIONES.
 ----------------------------------------------------------------------
 
   +------------------------------+
-    Pruebas Correctas : 4
-    Pruebas Incorrectas: 22
+    Pruebas Correctas : 26
+    Pruebas Incorrectas: 0
     Pruebas NI: 0
   +------------------------------+
 

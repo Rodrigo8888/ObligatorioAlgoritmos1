@@ -121,6 +121,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ExpresionBin.cpp" />
+    <ClCompile Include="ExpresionCte.cpp" />
+    <ClCompile Include="ExpresionVar.cpp" />
     <ClCompile Include="main.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -187,6 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constantes.h" />
+    <ClInclude Include="ExpresionBin.h" />
+    <ClInclude Include="ExpresionCte.h" />
+    <ClInclude Include="ExpresionVar.h" />
     <ClInclude Include="TipoRetorno.h" />
     <ClInclude Include="ConductorPruebaObl2.h" />
     <ClInclude Include="PruebaCorreccionExpresiones.h" />
