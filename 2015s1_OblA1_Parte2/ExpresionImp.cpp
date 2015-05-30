@@ -11,35 +11,34 @@ ostream &operator<<(ostream &out, const Expresion &exp)
 
 ExpresionImp::ExpresionImp()
 {
-	//NO IMPLEMENTADO
+	this->e = new ExpresionImp(0);
 }
 
 ExpresionImp::ExpresionImp(int valor)
 {
-	//NO IMPLEMENTADO
+	this->e = ExpresionCte(valor);
 }
 
 ExpresionImp::ExpresionImp(char *referencia)
 {
-	//NO IMPLEMENTADO
+	this->e = ExpresionRef (referencia);
 }
 
 ExpresionImp::ExpresionImp(const Expresion &exp)
 {
-	//NO IMPLEMENTADO
+	this->e = exp.Clon();
 }
 
 ExpresionImp::ExpresionImp(const ExpresionImp &exp)
 {
-	//NO IMPLEMENTADO
+	this->e = exp.Clon();
 }
 
 Expresion &ExpresionImp::operator=(const Expresion &exp)
 {
 	if(this != &exp) {
-		
-		//NO IMPLEMENTADO
-	
+		delete e;
+		this ->e = exp.Clon();	
 	}
 	return *this;
 }
@@ -47,106 +46,113 @@ Expresion &ExpresionImp::operator=(const Expresion &exp)
 Expresion &ExpresionImp::operator=(const ExpresionImp &exp)
 {
 	if(this != &exp) {
-
-		//NO IMPLEMENTADO
-
+		delete e;
+		this ->e = exp.Clon();	
 	}
 	return *this;
 }
 
 ExpresionImp::~ExpresionImp()
 {
-	//NO IMPLEMENTADO
+	delete this->e;
 }
 
 bool ExpresionImp::operator==(const Expresion &exp) const {
-
-	//NO IMPLEMENTADO
-	return false;
+	bool e1,e2;
+	int resp1 = this->Evaluar(e1);
+	int resp2 = exp.Evaluar(e2);
+	if (e1&&e2) return true;
+	if (e1!= e2) return false;
+	return resp1==resp2;
 }
 
 bool ExpresionImp::operator!=(const Expresion &exp) const {
-
-	//NO IMPLEMENTADO
-	return false;
+	bool e1,e2;
+	int resp1 = this->Evaluar(e1);
+	int resp2 = exp.Evaluar(e2);
+	if (e1&&e2) return true;
+	if (e1!= e2) return false;
+	return resp1!=resp2;
 }
 
 bool ExpresionImp::operator<(const Expresion &exp) const {
-
-	//NO IMPLEMENTADO
-	return false;
+	bool e1,e2;
+	int resp1 = this->Evaluar(e1);
+	int resp2 = exp.Evaluar(e2);
+	if (e1&&e2) return false;
+	if (e1|| e2) return false;
+	return resp1<resp2;
 }
 
 bool ExpresionImp::operator<=(const Expresion &exp) const {
-
-	//NO IMPLEMENTADO
-	return false;
+	bool e1,e2;
+	int resp1 = this->Evaluar(e1);
+	int resp2 = exp.Evaluar(e2);
+	if (e1&&e2) return true;
+	if (e1!= e2) return false;
+	return resp1<=resp2;
 }
 
 bool ExpresionImp::operator>(const Expresion &exp) const {
-
-	//NO IMPLEMENTADO
+	bool e1,e2;
+	int resp1 = this->Evaluar(e1);
+	int resp2 = exp.Evaluar(e2);
+	if (e1&&e2) return false;
+	if (e1!= e2) return false;
+	return resp1>resp2;
 	return false;
 }
 
 bool ExpresionImp::operator>=(const Expresion &exp) const {
-
-	//NO IMPLEMENTADO
-	return false;
+	bool e1,e2;
+	int resp1 = this->Evaluar(e1);
+	int resp2 = exp.Evaluar(e2);
+	if (e1&&e2) return true;
+	if (e1!= e2) return false;
+	return resp1>=resp2;
 }
 
 Expresion &ExpresionImp::operator+(const Expresion &exp) const
 {
-	//NO IMPLEMENTADO
-	return *new ExpresionImp();
+	return *new ExpresionImp(ExpresionBin(this->e,'+',exp));
 }
 
 Expresion &ExpresionImp::operator-(const Expresion &exp) const
 {
-	//NO IMPLEMENTADO
-	return *new ExpresionImp();
+	return *new ExpresionImp(ExpresionBin(this->e,'-',exp));
 }
 
 Expresion &ExpresionImp::operator*(const Expresion &exp) const
 {
-	//NO IMPLEMENTADO
-	return *new ExpresionImp();
+	return *new ExpresionImp(ExpresionBin(this->e,'*',exp));
 }
 
 Expresion &ExpresionImp::operator/(const Expresion &exp) const
 {
-	//NO IMPLEMENTADO
-	return *new ExpresionImp();
+	return *new ExpresionImp(ExpresionBin(this->e,'/',exp));
 }
 
 int ExpresionImp::Evaluar(bool &error) const
 {
-
-	//NO IMPLEMENTADO
-	return 0;
+	return this->e->Evaluar(error);
 }
 
 int ExpresionImp::Evaluar(InterfazDelSistema* interfaz, bool &error) const
 {
-
-	//NO IMPLEMENTADO
-	return 0;
+	return this->e->Evaluar(interfaz,error);
 }
 
 char *ExpresionImp::Formula() const
 {
-
-	//NO IMPLEMENTADO
-	char *ret = new char[1];
-	ret[0] = '\0';
-	return ret;
+	return this->e->Formula();
 }
 
 Expresion *ExpresionImp::Clon() const
 {
-
-	//NO IMPLEMENTADO
-	return new ExpresionImp();
+	ExpresionImp *nuevo = new ExpresionImp();
+	delete nuevo->e;
+	nuevo->e = this->e->Clon();
+	return nuevo;
 }
 
 #endif

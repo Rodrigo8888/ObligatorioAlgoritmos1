@@ -3,6 +3,10 @@
 
 #include "Expresion.h"
 #include "Cadena.h"
+#include "ExpresionCte.h"
+#include "ExpresionRef.h"
+#include "ExpresionBin.h"
+
 
 class ExpresionImp : public Expresion
 {
@@ -38,7 +42,7 @@ public:
 
 private:
 
-	// Atributos
+	Expresion *e;
 
 };
 
