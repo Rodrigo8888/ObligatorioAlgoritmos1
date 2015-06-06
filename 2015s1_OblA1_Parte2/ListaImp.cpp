@@ -31,7 +31,6 @@ ListaImp<T>::ListaImp(const ListaImp<T> &l) {
 
 template <class T>
 Lista<T> &ListaImp<T>::operator=(const Lista<T> &l) { 
-		virtual Lista<T> &operator=(const Lista<T> &l) {
 		if (this != &l) {
 			this->Vaciar();
 
@@ -41,7 +40,7 @@ Lista<T> &ListaImp<T>::operator=(const Lista<T> &l) {
 		}
 		return *this;
 	}
-}
+
 
 template <class T>
 Lista<T> &ListaImp<T>::operator=(const ListaImp<T> &l) { 
@@ -100,7 +99,7 @@ void ListaImp<T>::AgregarOrd(const T &e){
 			this->largo ++;
 		}		
 	}
-	else this->AgregarPpio();
+	else this->AgregarPpio(e);
 }
 
 template <class T>
@@ -117,7 +116,7 @@ void ListaImp<T>::BorrarPpio(){
 
 template <class T>
 void ListaImp<T>::BorrarFin(){
-	if(!this->EsVacia){
+	if(!this->EsVacia()){
 		NodoLista<T>* aux = this->fin;
 		this->fin = this->fin->ant;
 		delete(aux);
@@ -144,6 +143,17 @@ void ListaImp<T>::Borrar(const T &e){
 			aux = aux->sig;
 		}
 	}
+}
+
+template <class T>
+ T& ListaImp<T>::RecuperarInseguro(const T &e) {
+	NodoLista <T> *aux= this->ppio;
+	bool ok = false;
+	while (aux&& !ok){
+		if (aux->dato == e) ok = true;
+		else aux = aux->sig;
+	}
+	return aux->dato;
 }
 
 template <class T>

@@ -49,8 +49,10 @@ public:
 	void AgregarOrd(const T &e);	
 	void BorrarPpio();	
 	void BorrarFin();	
-	void Borrar(const T &e);		
+	void Borrar(const T &e);	
+	T& RecuperarInseguro(const T&);
 	const T& Recuperar(const T&) const; 
+
 	bool Existe(const T &e) const;	
 
 	void Vaciar();

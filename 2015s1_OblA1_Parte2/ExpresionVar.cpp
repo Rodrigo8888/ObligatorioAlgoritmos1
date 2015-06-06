@@ -139,7 +139,7 @@ Expresion &ExpresionVar::operator/(const Expresion &exp) const
 int ExpresionVar::Evaluar(bool &error) const
 {
 
-	assert(false);
+	error = true;;
 	return 0;
 }
 

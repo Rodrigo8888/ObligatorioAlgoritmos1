@@ -104,16 +104,22 @@
     <ClCompile Include="Referencia.cpp">
       <Filter>Clases auxiliares</Filter>
     </ClCompile>
-    <ClCompile Include="ExpresionImp.cpp">
-      <Filter>Expresion</Filter>
-    </ClCompile>
     <ClCompile Include="ConductorPruebaObl2.cpp">
       <Filter>Pruebas Unitarias</Filter>
+    </ClCompile>
+    <ClCompile Include="Celda.cpp">
+      <Filter>Planilla</Filter>
+    </ClCompile>
+    <ClCompile Include="Fila.cpp">
+      <Filter>Planilla</Filter>
     </ClCompile>
     <ClCompile Include="ExpresionBin.cpp">
       <Filter>Expresion</Filter>
     </ClCompile>
     <ClCompile Include="ExpresionCte.cpp">
+      <Filter>Expresion</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpresionImp.cpp">
       <Filter>Expresion</Filter>
     </ClCompile>
     <ClCompile Include="ExpresionVar.cpp">
@@ -196,14 +202,20 @@
     <ClInclude Include="Expresion.h">
       <Filter>Expresion</Filter>
     </ClInclude>
-    <ClInclude Include="ExpresionImp.h">
-      <Filter>Expresion</Filter>
-    </ClInclude>
     <ClInclude Include="Pila.h">
       <Filter>Auxiliares</Filter>
     </ClInclude>
     <ClInclude Include="ConductorPruebaObl2.h">
       <Filter>Pruebas Unitarias</Filter>
+    </ClInclude>
+    <ClInclude Include="Celda.h">
+      <Filter>Planilla</Filter>
+    </ClInclude>
+    <ClInclude Include="Fila.h">
+      <Filter>Planilla</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpresionVar.h">
+      <Filter>Expresion</Filter>
     </ClInclude>
     <ClInclude Include="ExpresionBin.h">
       <Filter>Expresion</Filter>
@@ -211,7 +223,7 @@
     <ClInclude Include="ExpresionCte.h">
       <Filter>Expresion</Filter>
     </ClInclude>
-    <ClInclude Include="ExpresionVar.h">
+    <ClInclude Include="ExpresionImp.h">
       <Filter>Expresion</Filter>
     </ClInclude>
   </ItemGroup>

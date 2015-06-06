@@ -58,9 +58,16 @@ public:
 
 	// PRE: Existe el elemento a recuperar
 	// POS: Retorna el primer elemento que sea igual a e
+	// Usa el operador == del elemento e para encontrar uno igual, el dato puede ser modificado despues
+	virtual T& RecuperarInseguro(const T&e) abstract;
+
+	// PRE: Existe el elemento a recuperar
+	// POS: Retorna el primer elemento que sea igual a e
 	// Usa el operador == del elemento e para encontrar uno igual
 	virtual const T& Recuperar(const T &e) const abstract;
-
+	
+	
+	
 	// PRE: -
 	// POS: Busca si existe un elemento que sea igual a e
 	// Usa el operador == del elemento e para encontrar uno igual

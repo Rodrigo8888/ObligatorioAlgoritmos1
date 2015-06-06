@@ -62,7 +62,7 @@ protected:
 
 private:
 	// Atributos
-	unsigned int nro;
+	unsigned int nrof;
 	Lista<Celda>* celdas;
 };
 
